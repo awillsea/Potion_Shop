@@ -1,0 +1,110 @@
+<!-- here is another -->
+<!-- <div class="flex justify-center w-full py-2 gap-2">
+    <a href="#item1" class="btn btn-xs" >1</a> 
+    <a href="#item2" class="btn btn-xs">2</a> 
+    <a href="#item3" class="btn btn-xs">3</a> 
+    <a href="#item4" class="btn btn-xs">4</a>
+  </div> -->
+
+<div class="carousel w-full ">
+    <div id="item1" class="carousel-item w-full">
+        <div>
+        <h1 class="text-xl">MODAL CREATE POTION BUTTON</h1>
+        <img src="../../assets/content/cat-removebg-preview.png">
+        
+        
+            <!-- <input class="input input-sm input-primary m-2 required:border-red-500 " type="text" [(ngModel)]="potionID" placeholder="PotionID" required > -->
+            <input class="input input-sm input-primary m-2" type="text" [(ngModel)]="potionName" placeholder="Potion Name">
+            <input class="input input-sm input-primary m-2" type="text" [(ngModel)]="potionEffects" placeholder="Potion Effect">
+            <input class="input input-sm input-primary m-2" type="text" [(ngModel)]="potionSideEffect" placeholder="Potion Side Effect">
+            <input class="input input-sm input-primary m-2" type="text" [(ngModel)]="potionCharacteristics" placeholder="Potion Characteristics">
+            <input class="input input-sm input-primary m-2" type="number" [(ngModel)]="potionPrice">
+            <input class="input input-sm input-primary m-2" type="text" [(ngModel)]="wizard_firstname" placeholder="Creator First Name">
+            <input class="input input-sm input-primary m-2" type="text" [(ngModel)]="wizard_lastname" placeholder="Creator Last Name">
+        
+            <a href="#item2">
+              <button class="btn btn-sm m-2 btn-accent justify-center">Next</button>
+            </a>
+        </div>
+        
+    </div> 
+    
+    <div id="item2" class="carousel-item w-full flex flex-wrap justify-around">
+        
+      <div *ngFor="let img of listofIMGS">
+        <div class="form-control">
+        
+            
+              
+                
+               <label class=""  for={{img}}> 
+             <input id={{img}} class="appearance-none   "type="radio"  name="radio-1" (click)="attachImg(img)"  />
+                
+                <img src={{img}} class="w-24 h-24 rounded-full z-20" name="radio-1" >
+             </label>
+        
+        
+    
+    
+        
+        
+      </div>
+    </div> 
+    <div class="flex justify-center w-full py-2 gap-2">
+        <a href="#item1" class="btn btn-xs" >Previous</a> 
+        <a href="#item3" class="btn btn-xs">Next</a> 
+        
+      </div>
+    </div>
+
+   
+    <div id="item3" class="carousel-item w-full flex flex-col ">
+        <div class="card w-80 bg-slate-900 shadow-xl h-[33rem] ml-[15%] mt-2 justify-self-center ">
+            <figure class="m-auto h-1/2 w-fit">
+              <img src="{{potionPhotoUrl }}" alt="potion" class="thisimg" />
+            </figure>
+            <div class="card-body ">
+              <h2 class="card-title">
+                {{potionName}}
+                <div class="badge badge-secondary inline-flex">NEW</div>
+              </h2>
+              <p>{{ potionPrice }} shmeckles</p>
+              <!-- maybe add detail button later????? -->
+              <!-- <div class="card-actions justify-end">
+               
+              </div> -->
+            </div>
+           
+        
+            <a href="#item4" class="btn btn-sm m-2 btn-accent justify-center" (click)="sendPotionandWiz()" >
+              
+                Create
+              </a>
+                <button class="btn btn-sm btn-primary m-2 justify-center" (click)="clearInput()">CLEAR</button>
+            
+         </div>
+          <div class="flex justify-center w-full py-2 gap-2 mt-3">
+            <a href="#item2" class="btn btn-xs" >Previous</a> 
+            
+            
+          </div>
+
+    </div> 
+    <div id="item4" class="carousel-item w-full flex flex-col">
+        
+        <div class="justify-center text-center mt-2" >
+             Creating your Potion Meow... 
+            <img class="w-[50vh] h-[50vh]" src="../../assets/content/peachandgoma.gif">
+           
+           
+        
+        </div>
+        <div class="flex justify-center w-full py-2 gap-2 mt-3">
+          
+            <a href="#item1" class="btn btn-xs" (click)="clearInput()" >Make Another</a> 
+           
+            
+          </div>
+    </div>
+  </div> 
+ 

@@ -1,0 +1,15 @@
+<div class=" h-44 m-2 card card-side bg-base-200 shadow-xl bg-gradient-to-t from-secondary">
+    <figure class=" min-w-1/5 lg:w-2/5  cartimg ">
+      <img class="" src="{{cartItem.photoUrl}}" alt="{{cartItem.potion_name}} img"/>
+    </figure>
+  <div class="card-body ">
+      <h2 class="card-title lg:text-3xl truncate "> {{cartItem.potion_name}} </h2>
+      <p> {{cartItem.price}} Schmeckles </p>
+      <div class="card-actions justify-end">
+        <button class="bg-accent text-black btn btn-sm " (click)="deleteFromCart()">Delete</button>
+      </div>
+  </div>
+</div>
+  
+
+

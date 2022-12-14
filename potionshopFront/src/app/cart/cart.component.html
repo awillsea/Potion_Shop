@@ -1,0 +1,44 @@
+<div class="flex m-auto catimg relative z-10 flex-wrap lg:flex-nowrap">
+    <div class="lg:w-3/5  ">
+    <ng-container *ngFor="let cartItem of TheList" class="w-fill lg:w-fit">
+
+        <app-cartitemdetail
+            [cartItem]= "cartItem"
+            (sendCartId)=" removeFromCart($event)"
+            class="justify-items-stretch"
+        >
+        </app-cartitemdetail>
+
+    </ng-container>
+    </div>
+    <div class="lg:ml-auto"> 
+    <div class="stats stats-vertical shadow lg:ml-auto mt-10 mr-96 bg-secondary ">
+  
+        <div class="stat">
+          <div class="stat-title">Total Price</div>
+          <div class="stat-value">{{totalPrice}}</div>
+          <div class="stat-desc">Schmeckles</div>
+        </div>
+        
+        <div class="stat">
+          <div class="stat-title">Instant Delivery</div>
+          <div class="stat-value">5,000</div>
+          <div class="stat-desc">Schmeckles</div>
+        </div>
+        
+        <div class="stat">
+          <div class="stat-title">TOTAL COST</div>  
+          <div class="stat-title">Free</div>
+          <div class="stat-value line-through decoration-5 decoration-red-700">1,000,000</div>
+          <div class="stat-desc">For First Time Users</div>
+        </div>
+        
+      </div>
+    </div>
+    
+    
+</div>
+
+
+
+

@@ -1,0 +1,33 @@
+<app-hero></app-hero>
+
+
+<div class="flex justify-center m-2 ">
+    <input type="text" placeholder="SEARCH" 
+    class="input input-md input-accent" 
+    [(ngModel)]="search"
+    >
+    <button class="btn btn-accent ml-2" (click)="clearsearchBar()">Clear</button>
+</div>
+
+<!-- all this ^^ above can be undone, its only a test for navbar -->
+<div class="flex flex-wrap   justify-around bg-gradient-to-t from-secondary via-accent    to-transparent  ">
+    <!-- space-y-4 pt-20 -->
+    
+
+
+    <ng-container *ngFor="let potion of TheList | filter : search">
+        <app-potiondetail 
+            class="m-3"
+            [potion]= "potion"
+            *ngIf="potion.effects != null"
+            (sendPotion)=" addToCart($event)"
+           
+        >
+   
+        <!-- [RandomNumber]="pickNumber()" -->
+        </app-potiondetail>
+   
+
+    </ng-container>
+
+</div>

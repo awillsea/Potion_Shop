@@ -1,0 +1,120 @@
+<div class="flex justify-center static">
+  <div
+    class="carousel bg-gradient-to-t from-black via-transparent md:rounded-[25vh] md:w-3/4 md:mt-[1rem] overscroll-none"
+  >
+    <div id="slide1" class="carousel-item relative w-full">
+      <div>
+        <h2
+          class="font-scary absolute text-4xl mt-[10vh] ml-[12vh] md:text-9xl md:ml-[10vh]"
+        >
+          Bottle o' Boos
+        </h2>
+      </div>
+
+      <div style="z-index: -20" class="">
+        <img src="../../assets/content/Photo1.jpg" class="w-full" />
+      </div>
+
+      <div
+        class="absolute flex mt-[30vh] ml-[1vh] md:h-[15vh] md:mt-[75vh] md:ml-[25vh]"
+        *ngIf="paused"
+      >
+        <div class="typewriter z-20 text-sm font-scary h-full pt-8 md:text-6xl">
+          <ng-container>
+            {{ CarouselStatements[currentStatment] }}
+          </ng-container>
+        </div>
+      </div>
+      <div
+        class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+      >
+        <a href="#slide4" class="btn btn-circle z-10">❮</a>
+        <a href="#slide2" class="btn btn-circle z-10">❯</a>
+      </div>
+    </div>
+    <div id="slide2" class="carousel-item relative w-full">
+      <div>
+        <h2
+          class="font-scary absolute text-4xl mt-[10vh] ml-[12vh] md:text-9xl md:ml-[10vh]"
+        >
+          Bottle o' Boos
+        </h2>
+      </div>
+      <div style="z-index: -20">
+        <img src="../../assets/content/Photo2.jpg" class="w-full" />
+      </div>
+      <div
+        class="absolute flex mt-[30vh] ml-[1vh] md:h-[8rem] md:mt-[75vh] md:ml-[25vh]"
+        *ngIf="paused"
+      >
+        <div class="typewriter z-20 text-sm font-scary h-full pt-8 md:text-6xl">
+          <ng-container>
+            {{ CarouselStatements[currentStatment] }}
+          </ng-container>
+        </div>
+      </div>
+      <div
+        class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+      >
+        <a href="#slide1" class="btn btn-circle">❮</a>
+        <a href="#slide3" class="btn btn-circle">❯</a>
+      </div>
+    </div>
+    <div id="slide3" class="carousel-item relative w-full">
+      <div>
+        <h2
+          class="font-scary absolute text-4xl mt-[10vh] ml-[12vh] md:text-9xl md:ml-[10vh]"
+        >
+          Bottle o' Boos
+        </h2>
+      </div>
+      <div style="z-index: -20">
+        <img src="../../assets/content/Photo3.jpg" class="w-full" />
+      </div>
+      <div
+        class="absolute flex mt-[30vh] ml-[1vh] md:h-[8rem] md:mt-[75vh] md:ml-[25vh]"
+        *ngIf="paused"
+      >
+        <div class="typewriter z-20 text-sm font-scary h-full pt-8 md:text-6xl">
+          <ng-container>
+            {{ CarouselStatements[currentStatment] }}
+          </ng-container>
+        </div>
+      </div>
+      <div
+        class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+      >
+        <a href="#slide2" class="btn btn-circle">❮</a>
+        <a href="#slide4" class="btn btn-circle">❯</a>
+      </div>
+    </div>
+    <div id="slide4" class="carousel-item relative w-full">
+      <div>
+        <h2
+          class="font-scary absolute text-4xl mt-[10vh] ml-[12vh] md:text-9xl md:ml-[10vh]"
+        >
+          Bottle o' Boos
+        </h2>
+      </div>
+      <div style="z-index: -20">
+        <img src="../../assets/content/Photo4.jpg" class="w-full" />
+      </div>
+      <div
+        class="absolute flex mt-[30vh] ml-[1vh] md:h-[8rem] md:mt-[75vh] md:ml-[25vh]"
+        *ngIf="paused"
+      >
+        <div class="typewriter z-20 text-sm font-scary h-full pt-8 md:text-6xl">
+          <ng-container>
+            {{ CarouselStatements[currentStatment] }}
+          </ng-container>
+        </div>
+      </div>
+      <div
+        class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+      >
+        <a href="#slide3" class="btn btn-circle">❮</a>
+        <a href="#slide1" class="btn btn-circle">❯</a>
+      </div>
+    </div>
+  </div>
+</div>

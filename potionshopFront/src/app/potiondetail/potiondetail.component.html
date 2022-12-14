@@ -1,0 +1,64 @@
+<div class="card w-80 bg-base-200 shadow-xl h-[33rem]">
+  <figure class="m-auto h-1/2 w-fit">
+    <img src="{{ potion.photoUrl }}" alt="potion" class="thisimg" />
+  </figure>
+  <div class="card-body">
+    <h2 class="card-title">
+      {{ potion.potion_name }}
+      <div class="badge badge-secondary inline-flex">NEW</div>
+    </h2>
+    <p>{{ potion.price }} shmeckles</p>
+    <div class="card-actions justify-end">
+      <label for="{{ potion.id }}" class="badge btn btn-small bg-secondary">
+        Details
+      </label>
+
+      <button class="badge btn btn-small bg-secondary" (click)="addToCart()">
+        Add to Cart
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- <label>
+    {{ potion.potion_name}}
+</label> -->
+<div *ngIf="displaytoast">
+  <div class="toast z-20">
+    <div class="alert alert-success">
+      <div>
+        <span>Added Potion to Cart</span>
+      </div>
+    </div>
+  </div>
+</div>
+<input type="checkbox" id="{{ potion.id }}" class="modal-toggle flex justify-center" />
+<label for="{{ potion.id }}" class="modal cursor-pointer">
+  <label class="modal-box relative" for="">
+
+    <img src={{potion.photoUrl}} class="w-36 rounded-full ml-[40%] mb-3">
+
+
+    <h3 class="text-lg font-bold">
+      {{ potion.potion_name }}<br />
+      {{ potion.price }} shmeckles
+    </h3>
+    <p class="py-4">
+      <ng-container *ngIf="potion.effects != null">
+        effects: {{ potion.effects }}<br />
+      </ng-container>
+      <ng-container *ngIf="potion.sideEffects != null">
+        sideEffects: {{ potion.sideEffects }}<br />
+      </ng-container>
+      <ng-container *ngIf="potion.characteristics != null">
+        characteristics: {{ potion.characteristics }}<br />
+      </ng-container>
+      <ng-container *ngIf="potion.createdBy != 'cat'">
+        Inventor: {{ potion.wizard_first_name }} {{ potion.wizard_last_name }}
+      </ng-container>
+    </p>
+    <button class="badge btn btn-small bg-secondary" (click)="addToCart()">
+      Add to Cart
+    </button>
+  </label>
+</label>
